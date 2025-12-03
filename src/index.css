@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom smooth scroll with slower speed */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 40s linear infinite;
+}
+
+/* Slider dots customization */
+.slick-dots li button:before {
+  color: #ffc001 !important; /* primary color */
+  font-size: 12px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff9c01 !important; /* secondary color */
+}
