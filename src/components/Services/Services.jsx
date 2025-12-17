@@ -42,13 +42,19 @@ const Services = () => {
                         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center'>
                             {ServicesData.map(({ id, img, name, description }) => {
                                 return (
-                                    <div key={id} className='max-w-[300px] group rounded-2xl bg-white dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white duration-300 shadow-xl'>
-                                        <div className='h-[100px] mb-10'>
+                                    <div key={id} className='max-w-[300px] group rounded-2xl bg-white dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white duration-300 shadow-xl overflow-visible relative'>
+                                        <div className='h-[120px]'>
                                             <img src={img} alt={name} className='max-w-[200px] mx-auto block transform -translate-y-14 group-hover:scale-105 group-hover:rotate-6 duration-300'/>
                                         </div>
-                                        <div className='p-4 text-center'>
+                                        <div className='p-4 text-center pb-4 group-hover:pb-16 transition-all duration-300'>
                                             <h1 className='text-xl font-bold'>{name}</h1>
                                             <p className='text-gray-500 text-sm line-clamp-2 group-hover:text-white duration-300'>{description}</p>
+                                        </div>
+                                        {/* Add to Cart Button - appears on hover */}
+                                        <div className='absolute inset-x-0 bottom-0 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 rounded-b-2xl overflow-hidden pointer-events-none group-hover:pointer-events-auto'>
+                                            <button className='w-full bg-white dark:bg-gray-900 text-primary font-bold py-3 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition-all duration-300 pointer-events-auto'>
+                                                Add to Cart
+                                            </button>
                                         </div>
                                     </div>
                                 );

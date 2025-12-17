@@ -28,8 +28,9 @@ const bgImage = {
     height: '100%',
 };
 
-const Hero = () => {
+const Hero = ({ onOpenMenu }) => {
     const [imageId, setImageId] = React.useState(pokebowl);
+
     return (
         <>
             <div style={bgImage}
@@ -42,7 +43,12 @@ const Hero = () => {
                             <h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold'>Welcome to the Poke Fusion</h1>
                             <p className='text-sm'>Experience fresh, vibrant flavor at our Asian-inspired poke restaurant, where traditional Pacific Island bowls meet bold, modern tastes. We craft every bowl with premium sushi-grade fish, crisp vegetables, and house-made sauces infused with flavors from across Asia. From customizable signature creations to refreshing teas and sides, every bite is designed to be colorful, nourishing, and unforgettable. Whether you're grabbing a quick lunch or settling in for a flavorful escape, our poke is crafted to energize, excite, and satisfy..</p>
                             <div>
-                                <a href="#menu" className='bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full hover:scale-105 hover:shadow-lg duration-300 inline-block'>Order Now</a>
+                                <button 
+                                    onClick={onOpenMenu}
+                                    className='bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full hover:scale-105 hover:shadow-lg duration-300'
+                                >
+                                    Order Now
+                                </button>
                             </div>
                         </div>
                         {/* image section */}

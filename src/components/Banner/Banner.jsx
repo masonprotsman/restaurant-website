@@ -5,7 +5,7 @@ import { GrSecure } from 'react-icons/gr'
 import { IoFastFood } from 'react-icons/io5'
 import { GiFoodTruck } from 'react-icons/gi'
 
-const Banner = () => {
+const Banner = ({ onOpenMenu }) => {
     return (
         <>
             <div className='min-h-[550px] dark:bg-gray-900 dark:text-white duration-200 pb-4'>
@@ -39,7 +39,7 @@ const Banner = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <button className='bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:scale-105 duration-200'>Order Now</button>
+                                    <button onClick={onOpenMenu} className='bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:scale-105 duration-200'>Order Now</button>
                                 </div>
                             </div>
                         </div>

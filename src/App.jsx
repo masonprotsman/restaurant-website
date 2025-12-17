@@ -6,18 +6,26 @@ import Banner from './components/Banner/Banner'
 import AppStore from './components/AppStore/AppStore'
 import Testimonial from './components/Testimonial/Testimonial'
 import Footer from './components/Footer/Footer'
+import MenuDialog from './components/MenuDialog/MenuDialog'
 
 const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const handleOpenMenu = () => {
+    setIsMenuOpen(true);
+  };
+
   return (
     <>
-      <Navbar />
+      <MenuDialog isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <Navbar onOpenMenu={handleOpenMenu} />
       <div id="home">
-        <Hero />
+        <Hero onOpenMenu={handleOpenMenu} />
       </div>
       <div id="menu">
         <Services />
       </div>
-      <Banner />
+      <Banner onOpenMenu={handleOpenMenu} />
       <AppStore />
       <Testimonial />
       <div id="contact">
