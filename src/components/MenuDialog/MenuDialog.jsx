@@ -29,9 +29,19 @@ const menuItems = [
     }
 ]
 
-const MenuDialog = ({ isOpen, onClose }) => {
+const MenuDialog = ({ isOpen, onClose, initialCartItem }) => {
     const [cart, setCart] = useState([])
     const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
+
+    // Add initial item to cart when dialog opens
+    React.useEffect(() => {
+        if (initialCartItem && isOpen) {
+            const menuItem = menuItems.find(item => item.id === initialCartItem.id);
+            if (menuItem) {
+                addToCart(menuItem);
+            }
+        }
+    }, [initialCartItem, isOpen])
 
     const addToCart = (item) => {
         const existingItem = cart.find(cartItem => cartItem.id === item.id)

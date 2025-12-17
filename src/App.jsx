@@ -10,20 +10,35 @@ import MenuDialog from './components/MenuDialog/MenuDialog'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [initialCartItem, setInitialCartItem] = React.useState(null);
 
   const handleOpenMenu = () => {
     setIsMenuOpen(true);
   };
 
+  const handleAddToCartAndOpen = (item) => {
+    setInitialCartItem(item);
+    setIsMenuOpen(true);
+  };
+
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+    setInitialCartItem(null);
+  };
+
   return (
     <>
-      <MenuDialog isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <MenuDialog 
+        isOpen={isMenuOpen} 
+        onClose={handleCloseMenu} 
+        initialCartItem={initialCartItem}
+      />
       <Navbar onOpenMenu={handleOpenMenu} />
       <div id="home">
         <Hero onOpenMenu={handleOpenMenu} />
       </div>
       <div id="menu">
-        <Services />
+        <Services onAddToCartAndOpen={handleAddToCartAndOpen} />
       </div>
       <Banner onOpenMenu={handleOpenMenu} />
       <AppStore />

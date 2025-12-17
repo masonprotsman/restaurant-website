@@ -24,7 +24,7 @@ const ServicesData = [
     },
 ];
 
-const Services = () => {
+const Services = ({ onAddToCartAndOpen }) => {
     return (
         <>
             <div className='py-10 dark:bg-gray-900 dark:text-white duration-200'>
@@ -52,7 +52,10 @@ const Services = () => {
                                         </div>
                                         {/* Add to Cart Button - appears on hover */}
                                         <div className='absolute inset-x-0 bottom-0 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 rounded-b-2xl overflow-hidden pointer-events-none group-hover:pointer-events-auto'>
-                                            <button className='w-full bg-white dark:bg-gray-900 text-primary font-bold py-3 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition-all duration-300 pointer-events-auto'>
+                                            <button 
+                                                onClick={() => onAddToCartAndOpen && onAddToCartAndOpen({ id, name, img, description })}
+                                                className='w-full bg-white dark:bg-gray-900 text-primary font-bold py-3 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition-all duration-300 pointer-events-auto'
+                                            >
                                                 Add to Cart
                                             </button>
                                         </div>
