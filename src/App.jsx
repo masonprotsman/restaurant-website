@@ -3,7 +3,6 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import Services from './components/Services/Services'
 import Banner from './components/Banner/Banner'
-import AppStore from './components/AppStore/AppStore'
 import Testimonial from './components/Testimonial/Testimonial'
 import Footer from './components/Footer/Footer'
 import MenuDialog from './components/MenuDialog/MenuDialog'
@@ -41,7 +40,6 @@ const App = () => {
         <Services onAddToCartAndOpen={handleAddToCartAndOpen} />
       </div>
       <Banner onOpenMenu={handleOpenMenu} />
-      <AppStore />
       <Testimonial />
       <div id="contact">
         <Footer />
