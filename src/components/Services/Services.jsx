@@ -1,26 +1,68 @@
 import React from 'react'
-import img1 from '../../assets/pokebowl.png'
-import img2 from '../../assets/steakbowl.png'
-import img3 from '../../assets/chickenbowl.png'
+import pokeBowl from '../../assets/pokebowl.png'
+import steakBowl from '../../assets/steakbowl.png'
+import chickenBowl from '../../assets/chickenbowl.png'
+import friedRice from '../../assets/frice.png'
+import whiteRice from '../../assets/rice.png'
+import eggRoll from '../../assets/eggroll.png'
+import misoSoup from '../../assets/Miso-Soup.png'
+import wontonSoup from '../../assets/wonton-soup.png'
+import hotSourSoup from '../../assets/hssoup.png'
 
 const ServicesData = [
     {
         id: 1,
-        img: img1,
+        img: pokeBowl,
         name: 'Poke Bowl',
         description: 'Enjoy a variety of fresh and healthy poke bowls made with high-quality ingredients.',
     },
     {
         id: 2,
-        img: img2,
+        img: steakBowl,
         name: 'Steak Bowl',
         description: 'Savor our delicious steak bowls, cooked to perfection and served with your choice of sides.',
     },
     {
         id: 3,
-        img: img3,
+        img: chickenBowl,
         name: 'Chicken Bowl',
         description: 'Enjoy our flavorful chicken bowls, made with tender chicken and fresh ingredients for a satisfying meal.',
+    },
+    {
+        id: 4,
+        img: friedRice,
+        name: 'Fried Rice',
+        description: 'Classic fried rice with eggs, vegetables, and your choice of protein.',
+    },
+    {
+        id: 5,
+        img: whiteRice,
+        name: 'White Rice',
+        description: 'Steamed white rice, perfectly cooked and fluffy, a classic side for any dish.',
+    },
+    {
+        id: 6,
+        img: eggRoll,
+        name: 'Crispy Egg Rolls',
+        description: 'Golden fried egg rolls filled with vegetables and served with sweet chili sauce.',
+    },
+    {
+        id: 7,
+        img: misoSoup,
+        name: 'Miso Soup',
+        description: 'Traditional Japanese soup with tofu, seaweed, and green onions in a savory miso broth.',
+    },
+    {
+        id: 8,
+        img: wontonSoup,
+        name: 'Wonton Soup',
+        description: 'Delicate wontons filled with pork in a clear chicken broth with bok choy.',
+    },
+    {
+        id: 9,
+        img: hotSourSoup,
+        name: 'Hot & Sour Soup',
+        description: 'Spicy and tangy soup with mushrooms, tofu, bamboo shoots, and egg ribbons.',
     },
 ];
 
