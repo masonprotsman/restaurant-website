@@ -86,7 +86,7 @@ const Services = ({ onAddToCartAndOpen }) => {
                                 return (
                                     <div key={id} className='max-w-[300px] group rounded-2xl bg-white dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white duration-300 shadow-xl overflow-visible relative'>
                                         <div className='h-[120px]'>
-                                            <img src={img} alt={name} className='max-w-[200px] mx-auto block transform -translate-y-14 group-hover:scale-105 group-hover:rotate-6 duration-300'/>
+                                            <img src={img} alt={name} className={`mx-auto block transform group-hover:scale-105 group-hover:rotate-6 duration-300 ${id === 8 ? 'max-w-[170px] -translate-y-14' : id === 6 ? 'max-w-[260px] -translate-y-14' : 'max-w-[200px] -translate-y-14'}`}/>
                                         </div>
                                         <div className='p-4 text-center pb-4 group-hover:pb-16 transition-all duration-300'>
                                             <h1 className='text-xl font-bold'>{name}</h1>
