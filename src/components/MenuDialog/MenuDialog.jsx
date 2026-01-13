@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 import { FaShoppingCart, FaTimes, FaPlus, FaMinus } from 'react-icons/fa'
-import pokebowl from '../../assets/pokebowl.png'
-import steakbowl from '../../assets/steakbowl.png'
-import chickenbowl from '../../assets/chickenbowl.png'
+import pokeBowl from '../../assets/pokebowl.png'
+import steakBowl from '../../assets/steakbowl.png'
+import chickenBowl from '../../assets/chickenbowl.png'
+import friedRice from '../../assets/frice.png'
+import whiteRice from '../../assets/rice.png'
+import eggRoll from '../../assets/eggroll.png'
+import misoSoup from '../../assets/Miso-Soup.png'
+import wontonSoup from '../../assets/wonton-soup.png'
+import hotSourSoup from '../../assets/hssoup.png'
 import CheckoutDialog from '../CheckoutDialog/CheckoutDialog'
 
 const menuItems = [
@@ -11,21 +17,63 @@ const menuItems = [
         name: "Poke Bowl",
         description: "Fresh salmon with rice, avocado, and sesame",
         price: 12.99,
-        image: pokebowl
+        image: pokeBowl
     },
     {
         id: 2,
         name: "Steak Bowl",
         description: "Grilled steak with vegetables and rice",
         price: 15.99,
-        image: steakbowl
+        image: steakBowl
     },
     {
         id: 3,
         name: "Chicken Bowl",
         description: "Grilled chicken with fresh salad and rice",
         price: 11.99,
-        image: chickenbowl
+        image: chickenBowl
+    },
+    {
+        id: 4,
+        name: "Fried Rice",
+        description: "Classic fried rice with eggs, vegetables, and your choice of protein",
+        price: 8.99,
+        image: friedRice
+    },
+    {
+        id: 5,
+        name: "White Rice",
+        description: "Steamed white rice, perfectly cooked and fluffy",
+        price: 3.99,
+        image: whiteRice
+    },
+    {
+        id: 6,
+        name: "Crispy Egg Rolls",
+        description: "Golden fried egg rolls filled with vegetables",
+        price: 6.99,
+        image: eggRoll
+    },
+    {
+        id: 7,
+        name: "Miso Soup",
+        description: "Traditional Japanese soup with tofu and seaweed",
+        price: 4.99,
+        image: misoSoup
+    },
+    {
+        id: 8,
+        name: "Wonton Soup",
+        description: "Delicate pork wontons in savory chicken broth",
+        price: 6.99,
+        image: wontonSoup
+    },
+    {
+        id: 9,
+        name: "Hot & Sour Soup",
+        description: "Spicy and tangy soup with mushrooms and tofu",
+        price: 6.99,
+        image: hotSourSoup
     }
 ]
 
