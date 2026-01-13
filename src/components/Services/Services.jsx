@@ -81,7 +81,7 @@ const Services = ({ onAddToCartAndOpen }) => {
                     </div>
                     {/* card section */}
                     <div>
-                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center'>
+                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-14 md:gap-x-5 place-items-center'>
                             {ServicesData.map(({ id, img, name, description }) => {
                                 return (
                                     <div key={id} className='max-w-[300px] group rounded-2xl bg-white dark:bg-gray-800 dark:hover:bg-primary hover:bg-primary hover:text-white duration-300 shadow-xl overflow-visible relative'>
